@@ -1,0 +1,6 @@
+PROJECT FROM MY FIRST YEAR AT UCC
+
+# WebDev2-CA1
+Continuous Assessment 1 For Web Development 1
+
+DATABASE NEEDS TO BE RESET USING SCHEMA.SQL
