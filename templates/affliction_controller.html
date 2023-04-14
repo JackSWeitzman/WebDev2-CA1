@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block main_content %}
+<section id="controller">
+    <h1 class="heading-primary" id="controller-heading">Affliction Controller</h1>
+    <section id ="affliction-add">
+        <h2 class="heading-secondary" id="controller-heading">Add An Active Affliction</h1>
+        <form action="" method="POST" novalidate class="form">
+        {{ form.hidden_tag() }}
+        <p>{{ form.bodyPartAdd.label }}</p>
+        <p>{{ form.bodyPartAdd() }}</p>
+        </br>
+        <p>{{ form.afflictionAdd.label }}</p>
+        <p>{{ form.afflictionAdd() }}</p>
+        </br>
+        <p>{{ form.health.label }}</p>
+        <p>{{ form.health() }}</p>
+        </br>
+        <p>{{ form.submitAdd }}</p>
+        {% for error in form.afflictionAdd.errors %}
+            <p>{{ error }}</p>
+        {% endfor %}
+        </form>
+        </br>
+    </section>
+    <section id="affliction-remove">
+        <h2 class="heading-secondary" id="controller-heading">Remove An Active Affliction</h1>
+        <form action="" method="POST" novalidate class="form">
+        {{ form2.hidden_tag() }}
+        <p>{{ form2.bodyPartRemove.label }}</p>
+        <p>{{ form2.bodyPartRemove() }}</p>
+        </br>
+        <p>{{ form2.afflictionRemove.label }}</p>
+        <p>{{ form2.afflictionRemove() }}</p>
+        </br>
+        <p>{{ form2.submitRemove }}</p>
+        {% for error in form2.afflictionRemove.errors %}
+            <p>{{ error }}</p>
+        {% endfor %}
+        </form>
+        </br>
+    </section>
+    <section id="affliction-delete-all">
+        <h2 class="heading-secondary" id="controller-heading">Remove All Active Afflictions</h1>
+        <form action="" method="POST" novalidate class="form">
+        {{ form3.hidden_tag() }}
+        <p>{{ form3.removeAllConfirm.label }}</p>
+        <p>{{ form3.removeAllConfirm() }}</p>
+        </br>
+        <p>{{ form3.submit() }}</p>
+        {% for error in form3.removeAllConfirm.errors %}
+            <p>{{ error }}</p>
+        {% endfor %}
+        </form>
+    </section>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block main_content %}
+<section class="home-page">
+    <h1 class="heading-primary">Home</h1>
+    <section class="page-breakdown">
+        <section class="controller-break">
+            <h2 class="heading-secondary">Controller</h2>
+            <p class="access-message"> MUST BE LOGGED IN TO ACCESS </p>
+            <br/>
+            <p>The controller allows you to add and remove active afflictions from your character sheet.</p>
+        </section>
+        <section class="active-break">
+            <h2 class="heading-secondary">Active Afflictions</h2>
+            <p class="access-message"> MUST BE LOGGED IN TO ACCESS </p>
+            <br/>
+            <p>Displays your characters total health (Whole Body), each body part's individual health, the afflictions affecting each body part and the amount of damage that affliction is doing.</p>
+        </section>
+        <section class="list-break">
+            <h2 class="heading-secondary">List of Afflictions</h2>
+            <p>After selecting a body part the page will display a list of all possible afflictions that can be added to the specified body part.</p>
+        </section>
+        <section class="register-break">
+            <h2 class="heading-secondary">Register</h2>
+            <p>You register a new account here.</p>
+        </section>
+        <section class="login-break">
+            <h2 class="heading-secondary">Login</h2>
+            <p>You login to an already existing account here.</p>
+        </section>
+        <section class="logout-break">
+            <h2 class="heading-secondary">Logout</h2>
+            <p class="access-message"> MUST BE LOGGED IN TO ACCESS </p>
+            <br/>
+            <p>You logout of your account here</p>
+        </section>
+        <section class="admin-break">
+            <h2 class="heading-secondary">Admin Controller</h2>
+            <p class="access-message"> MUST BE AN ADMIN ACCESS </p>
+            <br/>
+            <p>Displays controls that only admins can use, such as viewing other users character sheets and adding and removing afflictions to and from the database.</p>
+        </section>
+    </section>
+</section>
+{% endblock %}

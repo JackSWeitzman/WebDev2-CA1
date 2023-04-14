@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block main_content %}
+<section id="a-controller">
+<h1 class="heading-primary" id="admin-heading">Admin Controller</h1>
+<form action="" method="POST" novalidate class="form" id="admin-add">
+    <h2 class="heading-secondary">Add An Affliction To The Database</h2>
+    {{ form.hidden_tag() }}
+    <p>{{ form.bodyPartAdd.label }}</p>
+    <p>{{ form.bodyPartAdd() }}</p>
+    </br>
+    <p>{{ form.afflictionAdd.label }}</p>
+    <p>{{ form.afflictionAdd() }}</p>
+    </br>
+    <p>{{ form.descriptionAdd.label }}</p>
+    <p>{{ form.descriptionAdd() }}</p>
+    </br>
+    <p>{{ form.submitAdd }}</p>
+    </br>
+    {% for error in form.afflictionAdd.errors %}
+    <p>{{ error }}</p>
+    {% endfor %}
+</form>
+</br>
+
+<form action="" method="POST" novalidate class="form" id="admin-remove">
+    <h2 class="heading-secondary">Remove An Affliction From The Database</h2>
+    {{ form2.hidden_tag() }}
+    <p>{{ form2.bodyPartRemove.label }}</p>
+    <p>{{ form2.bodyPartRemove() }}</p>
+    </br>
+    <p>{{ form2.afflictionRemove.label }}</p>
+    <p>{{ form2.afflictionRemove() }}</p>
+    </br>
+    <p>{{ form2.submitRemove }}</p>
+    </br>
+    {% for error in form2.afflictionRemove.errors %}
+        <p>{{ error }}</p>
+    {% endfor %}
+</form>
+</br>
+
+<form action="" method="POST" novalidate class="form" id="admin-change">
+    <h2 class="heading-secondary">Change The Description Of An Affliction</h2>
+    {{ form4.hidden_tag() }}
+    <p>{{ form4.bodyPart.label }}</p>
+    <p>{{ form4.bodyPart() }}</p>
+    <br />
+    <p>{{ form4.affliction.label }}</p>
+    <p>{{ form4.affliction() }}</p>
+    <br />
+    <p>{{ form4.description.label }}</p>
+    <p>{{ form4.description() }}</p>
+    <br />
+    <p>{{ form4.submitChange() }}</p>
+    <br />
+    {% for error in form4.affliction.errors %}
+        <p>{{ error }}</p>
+    <br />
+    {% endfor %}
+    <br />
+</form>
+<form action="" method="POST" novalidate class="form" id="admin-search">
+    <h2 class="heading-secondary">Search Another Users Active Afflictions</h2>
+    {{ form3.hidden_tag() }}
+    <p>{{ form3.usernameSearch.label }}</p>
+    <p>{{ form3.usernameSearch() }}</p>
+    </br>
+    <p>{{ form3.submit }}</p>
+    </br>
+    {% for error in form3.usernameSearch.errors %}
+        <p>{{ error }}</p>
+    </br>
+    {% endfor %}
+</form>
+
+<form action="" method="POST" novalidate class="form" id="admin-give">
+    <h2 class="heading-secondary">Give Admin To Another User</h2>
+    {{ form5.hidden_tag() }}
+    <p>{{ form5.usernameGive.label }}</p>
+    <p>{{ form5.usernameGive() }}</p>
+    </br>
+    <p>{{ form5.confirmGive.label }}</p>
+    <p>{{ form5.confirmGive() }}</p>
+    <br/>
+    <p>{{ form5.submitGive }}</p>
+    </br>
+    {% for error in form5.usernameGive.errors %}
+        <p>{{ error }}</p>
+    </br>
+    {% endfor %}
+</form>
+
+<form action="" method="POST" novalidate class="form" id="admin-take">
+    <h2 class="heading-secondary">Take Admin Away From A User</h2>
+    {{ form6.hidden_tag() }}
+    <p>{{ form6.usernameTake.label }}</p>
+    <p>{{ form6.usernameTake() }}</p>
+    </br>
+    <p>{{ form6.confirmTake.label }}</p>
+    <p>{{ form6.confirmTake() }}</p>
+    <br/>
+    <p>{{ form6.submitTake }}</p>
+    </br>
+    {% for error in form6.usernameTake.errors %}
+        <p>{{ error }}</p>
+    </br>
+    {% endfor %}
+</form>
+</section>
+{% endblock %}

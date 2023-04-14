@@ -1,0 +1,422 @@
+@import url(general.css);
+
+/**************************************/
+/* NAVIGATION */
+/**************************************/
+
+.main-nav-link.current-page:hover,
+.main-nav-link.current-page:active{
+    background: var(nav-text-color);
+}
+
+/**************************************/
+/* HERO SECTION */
+/**************************************/
+
+#hero-image {
+    width: 50%;
+}
+
+#hero-section-left {
+    padding-top: 6rem;
+    margin: auto;
+    text-align: center;
+}
+
+
+#hero-section-right {
+    padding-top: 6rem;
+    text-align: center;
+}
+
+/**************************************/
+/* BIOGRAPHY SECTION */
+/**************************************/
+
+#biography-section {
+    padding: 4.8rem 0 0 0;
+}
+
+#biography-heading {
+    margin-bottom: 2rem;
+}
+
+.bio-image {
+    max-width: 100%;
+}
+
+#biography-heading-container {
+    text-align: center;
+}
+
+/**************************************/
+/* LEGAL LIFE SECTION */
+/**************************************/
+
+#legal-section-landing {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    overflow: auto;
+}
+
+#legal-heading-container{
+    padding-top: 13.5rem;
+    text-align: center;
+    overflow: auto;
+}
+
+.legal-image-container {
+    text-align: center;
+}
+
+#legal-sidebar {
+    grid-area: legal-sidebar;
+    background: #d1d3d5;
+}
+
+.sticky {
+    position: sticky;
+    top: 5rem;
+}
+
+#legal-nav {
+    padding-top: 4rem;
+}
+
+#legal-nav-heading {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.legal-nav-list{
+    padding: 1rem 1rem 1rem 2rem;
+    line-height: 3rem;
+    list-style-position: outside;
+    text-align: center;
+}
+
+.legal-nav-link:link,
+.legal-nav-link:visited{
+    font-weight: 500;
+    font-size: 150%;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.legal-nav-link:hover,
+.legal-nav-link:active{
+    color: var(nav-text-color);
+}
+
+
+#crime-info-section {
+    padding-bottom: 6rem;
+}
+
+.crime-heading-container {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 4rem;
+}
+
+.crime-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.crime-image-container {
+    text-align: center;
+}
+
+.crime-image {
+    width: 25rem;
+    height: 25rem;
+}
+
+#legal-wanted-sidebar {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+}
+
+#legal-wanted-end {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+}
+
+.wanted-border {
+    padding: 0.2rem;
+    border: solid black 0.2rem;
+}
+
+.wanted-header {
+    color: red;
+}
+
+.wanted-text {
+    font-weight: 500;
+    line-height: 1.2rem;
+}
+
+/**************************************/
+/* FAQ SECTION */
+/**************************************/
+
+#question-section-landing {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+#question-heading-container {
+    padding-top: 13.5rem;
+    text-align: center;
+    overflow: auto;
+}
+
+#question-image-container {
+    text-align: center;
+}
+
+#question-image {
+    width: 25%;
+    height: auto;
+}
+
+#question-table-container {
+    align-items: center;
+    padding: 4rem;
+}
+
+#question-table {
+    margin: auto;
+    border: 0.1rem solid black;
+    border-collapse: collapse;
+}
+
+#question-table th {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.4rem;
+}
+
+#question-table td {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.first-column-table {
+    width: 50%;
+}
+
+.second-column-table {
+    width: 50%;
+}
+
+#question-table tr:nth-child(odd) {
+    background-color: #D5D9DE;
+}
+
+#question-table tr:nth-child(even) {
+    background-color: var(--primary-color);
+}
+
+/**************************************/
+/* FOOTER */
+/**************************************/
+
+.footer {
+    position: absolute;
+    background-color: var(--primary-color);
+    padding: 2rem 3rem;
+    line-height: 2rem;
+    z-index: 2;
+    width: 100vw;
+}
+
+@media screen and (min-width: 896px) {
+    /**************************************/
+    /* NAVIGATION */
+    /**************************************/
+
+    .main-nav-list{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        line-height: 3rem;
+        gap: 3.2rem;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited{
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.8rem;
+        transition: all 0.3s;
+    }
+
+    .main-nav-link:hover,
+    .main-nav-link:active{
+        padding: 0.6rem 1.2rem;
+        color: var(nav-text-color);
+    }
+
+    .main-nav-link.current-page:link,
+    .main-nav-link.current-page:visited{
+        padding: 0.6rem 1.2rem;
+        border-radius: 1.1rem;
+        color: #FFF;
+        background: #3775D2;
+    }
+    
+    /**************************************/
+    /* HEADER */
+    /**************************************/
+
+    .header{
+        position: fixed;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary-color);
+        height: 6rem;
+        padding: 0 4.8rem 0 1.6rem;
+        z-index: 2;
+    }
+
+    .logo {
+        height: 4rem;
+    }
+
+
+    /**************************************/
+    /* HERO SECTION */
+    /**************************************/
+
+    #hero-section {
+        padding: 6rem 0 9.6rem 0;
+        max-width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: var(--primary-color);
+    }
+
+    #hero {
+        max-width: 130rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left right";
+        padding: 0 0 0 6.4rem;
+        gap: 9.6rem
+    }
+
+    #hero-section-left {
+        grid-area: left;
+    }
+
+    #hero-section-right {
+        grid-area: right;
+    }
+
+    /**************************************/
+    /* BIOGRAPHY SECTION */
+    /**************************************/
+
+    #biography {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "bio-heading bio-heading"
+                            "first-text first-image"
+                            "second-image second-text"
+                            "wrong wrong";
+        gap: 9.6rem;
+        padding: 0 6.4rem;
+    }
+
+    #biography-heading-container {
+        grid-area: bio-heading;
+    }
+
+    #bio-text-first {
+        grid-area: first-text;
+        font-size: 1.5rem;
+        margin: auto;
+    }
+
+    #bio-image-first {
+        grid-area: first-image;
+    }
+
+    #bio-text-second {
+        grid-area: second-text;
+        font-size: 1.5rem;
+        margin: auto;
+    }
+
+    #bio-image-second {
+        grid-area: second-image;
+    }
+
+    /**************************************/
+    /* LEGAL LIFE SECTION */
+    /**************************************/
+
+    #legal-life {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas:  "legal-section-landing legal-section-landing"
+                              "legal-sidebar crime-info";
+    }
+
+    #legal-section-landing {
+        grid-area: legal-section-landing;
+    }
+
+    .legal-image {
+        width: 50%;
+        height: 100%;
+    }
+
+    #crime-info-section {
+        grid-area: crime-info;
+    }
+
+    .crime-info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .crime-heading-container {
+        grid-column: 1 / span 2;
+    }
+
+    .crime-heading {
+        padding: 4rem 0 6rem 0;
+        font-size: 2.5rem;
+        text-decoration: underline;
+    }
+
+    .crime-text-container {
+        grid-column: 1;
+        text-align: center;
+        margin: auto;
+        padding: 0 6rem;
+    }
+
+    .crime-image-container {
+        grid-column: 2;
+    }
+}

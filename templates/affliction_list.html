@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block main_content %}
+<h1 class="heading-primary">List Of All Possible Afflictions</h1>
+<form action="" method="POST" novalidate class="form">
+{{ form.hidden_tag() }}
+<p>{{ form.bodyPartChoice.label }}</p>
+<p>{{ form.bodyPartChoice() }}</p>
+</br>
+<p>{{ form.submit() }}</p>
+</form>
+{% if showAfflictions == True %}
+<section id="list">
+    <h2 class="heading-secondary">{{ selectedPart }} Afflictions</h1>
+        <br/>
+    <p>(Name: Description)</p>
+    {% for key, value in sortedDict.items() %}
+        <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+{% endif %}
+{% endblock %}
+</section>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block main_content %}
+<section id="active">
+<h1 class="heading-primary active-heading">Body Part Afflictions</h1>
+{% for item in part %}
+    <section class="active-body-part">
+    {% for j in healthList %}
+        {% if j["body_part"] == item %}
+            <h2>{{ item }} {{ j["body_part_health_active"] }}/{{ j["body_part_health_total"] }}</h2>
+            {% set x = j["body_part_health_active"] %}
+            {% set y = j["body_part_health_total"] %}
+            {% set z = (x/(y/10))|round|int %}
+            {% if z == 0 %}
+                {% set z = 1 %}
+            {% endif %}
+            {% if z == 8 or z == 9 or z == 10 %}
+                <p style="color: green">{{ '▣' * z }}</p>
+            {% elif z == 5 or z == 6 or z == 7 %}
+                <p style="color: yellow;">{{ '▣' * z }}</p>
+            {% elif z == 3 or z == 4 %}
+                <p style="color: orange;">{{ '▣' * z }}</p>
+            {% elif z == 1 or z== 2 %}
+                <p style="color: red;">{{ '▣' * z }}</p>
+            {% else %}
+                <p>Graphic Error</p>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </br>
+    {% for i in orderedDict %}
+        {% for key, value in i.items() %}
+            {% if key == item %}
+                {% for key2, value2 in value.items() %}
+                    {% if key == "Whole Body" %}
+                        <p>{{ key2 }}</p>
+                    {% else %}
+                        <p>{{ key2 }} : {{ value2 }} damage</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</section>
+{% endfor %}
+</section>
+{% endblock %}

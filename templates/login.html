@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block main_content %}
+<h1 class="heading-primary">Sign In To Your Account</h1>
+<form action="" method="post" novalidate class="form">
+{{ form.hidden_tag() }}
+<p>{{ form.username.label }}</p>
+<p>{{ form.username() }}</p>
+{% for error in form.username.errors %}
+    <p>{{ error }}</p>
+{% endfor %}
+</br>
+<p>{{ form.password.label }}</p>
+<p>{{ form.password() }}</p>
+{% for error in form.password.errors %}
+    <p>{{ error }}</p>
+{% endfor %}
+</br>
+<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

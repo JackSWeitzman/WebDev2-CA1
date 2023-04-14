@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li><a href="{{ url_for('index') }}">Home Page</a></li>
+                </br>
+                {% if nav == 1 or nav == 2 %}
+                <li><a href="{{ url_for('controller') }}">Controller</a></li>
+                </br>
+                {% endif %}
+                {% if nav == 1 %}
+                <li><a href="{{ url_for('adminController') }}">Admin Controller</a></li>
+                </br>
+                {% endif %}
+                {% if nav == 1 or nav == 2 %}
+                <li><a href="{{ url_for('active') }}">Active Afflictions</a></li>
+                </br>
+                {% endif %}
+                <li><a href="{{ url_for('list') }}">List of Afflictions</a></li>
+                </br>
+                {% if nav == 3 %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                </br>
+                <li><a href="{{ url_for('register')}}">Register</a></li>
+                </br>
+                {% endif %}
+                {% if nav == 1 or nav == 2 %}
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                {% endif %}
+                </br>
+            </ul>
+        </nav>
+        <a href="{{ url_for('login')}}">{{ username }}</a>
+    </header>
+    <main>
+        {% block main_content %}{% endblock %}
+    </main>
+    <footer class="footer">
+        <p>&#169 Jack Weitzman Web Dev 2</p>
+    </footer>
+</body>
+</html>
