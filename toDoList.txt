@@ -1,0 +1,16 @@
+? progressive afflictions (click a + button to increase or decrease the severity of the selected affliction)
+ -- Show who is logged in (Show username in header in top right?)
+ -- Add ability for admin to view other active character sheets (search by username)
+? Add the ability to change the username / password ?? (not as important)
+? Add an equipment list (backpack, axe, rope, etc.)
+Ability to add a character image
+? Show in what order afflictions were added to the character (either date or number?) (this feature probably shouldnt matter)
+ -- Add feature to remove all current active afflictions
+Drop down menu for all afflictions in the controller menu
+ -- Edit feature for admin controller where you can directly change either the name or description of an already existing item in the affliction database 
+? Ability to click on a body part to add an affliction in the controller tab
+ -- Make navigation look better (only show active/controller/etc. when logged in AND only show a-controller when account is admin)
+ -- Health bar instead (or ontop) of numbers (general graphics)
+CSS
+HTML
+ -- When you sign in, take you to controllers
